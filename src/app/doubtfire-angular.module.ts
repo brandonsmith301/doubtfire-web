@@ -40,6 +40,7 @@ import { MatLegacyChipsModule as MatChipsModule } from '@angular/material/legacy
 import { MatGridListModule } from '@angular/material/grid-list';
 import { PdfViewerModule } from 'ng2-pdf-viewer';
 import { UIRouterUpgradeModule } from '@uirouter/angular-hybrid';
+import { NgxChartsModule } from '@swimlane/ngx-charts';
 
 import { setTheme } from 'ngx-bootstrap/utils';
 
@@ -157,11 +158,9 @@ import {
 import { FileDownloaderService } from './common/file-downloader/file-downloader';
 import { PdfImageCommentComponent } from './tasks/task-comments-viewer/pdf-image-comment/pdf-image-comment.component';
 import { OverseerImageListComponent } from './admin/institution-settings/overseer-images/overseer-image-list.component';
-
 import { TaskAssessorComponent } from './tasks/task-definition-editor/task-assessor/task-assessor.component';
 import { TaskAssessmentCommentComponent } from './tasks/task-comments-viewer/task-assessment-comment/task-assessment-comment.component';
 import { TaskAssessmentModalComponent } from './common/modals/task-assessment-modal/task-assessment-modal.component';
-
 import { TaskSubmissionHistoryComponent } from './tasks/task-submission-history/task-submission-history.component';
 import { HomeComponent } from './home/states/home/home.component';
 import { IsActiveUnitRole } from './common/pipes/is-active-unit-role.pipe';
@@ -190,6 +189,7 @@ import { TaskDashboardComponent } from './projects/states/dashboard/directives/t
 import { InboxComponent } from './units/states/tasks/inbox/inbox.component';
 import { ProjectProgressBarComponent } from './common/project-progress-bar/project-progress-bar.component';
 import { TeachingPeriodListComponent } from './admin/states/teaching-periods/teaching-period-list/teaching-period-list.component';
+import { ProgressBurndownChartComponent } from './visualisations/progress-burndown-chart/progressburndownchart.component';
 
 // Note we need a separate function as it's required
 // by the AOT compiler.
@@ -271,6 +271,7 @@ import { TeachingPeriodUnitImportDialogComponent, TeachingPeriodUnitImportServic
     InboxComponent,
     ProjectProgressBarComponent,
     TeachingPeriodListComponent,
+    ProgressBurndownChartComponent,
   ],
   // Module Imports
   imports: [
@@ -322,6 +323,7 @@ import { TeachingPeriodUnitImportDialogComponent, TeachingPeriodUnitImportServic
     PickerModule,
     EmojiModule,
     PdfViewerModule,
+    NgxChartsModule,
     LottieModule.forRoot({ player: playerFactory }),
     LottieCacheModule.forRoot(),
     UIRouterUpgradeModule.forRoot({ states: doubtfireStates }),
@@ -330,6 +332,7 @@ import { TeachingPeriodUnitImportDialogComponent, TeachingPeriodUnitImportServic
       registrationStrategy: () => interval(6000).pipe(take(1)),
     }),
   ],
+
   // Services we provide
   providers: [
     CampusService,

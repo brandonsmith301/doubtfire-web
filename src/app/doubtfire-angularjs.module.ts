@@ -267,6 +267,7 @@ import { TaskAssessmentCardComponent } from './projects/states/dashboard/directi
 import { TaskSubmissionCardComponent } from './projects/states/dashboard/directives/task-dashboard/directives/task-submission-card/task-submission-card.component';
 import { InboxComponent } from './units/states/tasks/inbox/inbox.component';
 import { TeachingPeriodUnitImportService } from './admin/states/teaching-periods/teaching-period-unit-import/teaching-period-unit-import.dialog';
+import { ProgressBurndownChartComponent } from './visualisations/progress-burndown-chart/progressburndownchart.component';
 
 export const DoubtfireAngularJSModule = angular.module('doubtfire', [
   'doubtfire.config',
@@ -401,6 +402,11 @@ DoubtfireAngularJSModule.directive('statusIcon', downgradeComponent({ component:
 DoubtfireAngularJSModule.directive(
   'taskPlagiarismCard',
   downgradeComponent({ component: TaskPlagiarismCardComponent })
+);
+
+DoubtfireAngularJSModule.directive(
+  'appProgressBurndownChart',
+  downgradeComponent({ component: ProgressBurndownChartComponent })
 );
 
 // Global configuration

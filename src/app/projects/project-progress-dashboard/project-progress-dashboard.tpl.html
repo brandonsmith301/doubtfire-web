@@ -59,7 +59,7 @@
       </div>
       <div class="panel-body">
         <div class="burndown-chart" ng-if="currentVisualisation == 'burndown'">
-          <progress-burndown-chart project="project" unit="unit"></progress-burndown-chart>
+          <app-progress-burndown-chart [project]="project" [unit]="project.unit" [grade]="project.targetGrade"></app-progress-burndown-chart>
         </div>
         <div ng-if="currentVisualisation == 'taskSummary'">
           <student-task-status-pie-chart project="project"></student-task-status-pie-chart>
